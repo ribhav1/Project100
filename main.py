@@ -23,8 +23,11 @@ class atm(object):
         self.balance = self.balance + amount
         print('You have deposited ' + str(amount) + ' into your account')
         print('Your account balance is now: ' + str(self.balance))
-        
-atm_machine = atm(12345678, 1234)
-atm_machine.check_balance(12345678, 1234)
-atm_machine.cash_withdrawl(12345678, 1234, 5)
-atm_machine.cash_deposit(12345678, 1234, 5)
+
+atm_card_number = input('Enter ATM card number: ')
+pin_number = input('Enter Pin number: ')
+
+atm_machine = atm(atm_card_number, pin_number)
+atm_machine.check_balance(atm_card_number, pin_number)
+atm_machine.cash_withdrawl(atm_card_number, pin_number, 5)
+atm_machine.cash_deposit(atm_card_number, pin_number, 5)
